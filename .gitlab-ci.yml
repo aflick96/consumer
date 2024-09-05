@@ -1,0 +1,11 @@
+stages:
+  - fetch
+
+fetch_recent_files:
+  stage: fetch
+  image: python:3.9
+  script:
+    - pip install boto3  #AWS SDK
+    - python scripts/fetch_recent_files.py
+  only:
+    - triggers  #only run when triggered by AWS Lambda
