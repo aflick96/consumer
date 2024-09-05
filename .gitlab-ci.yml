@@ -6,6 +6,6 @@ fetch_recent_files:
   image: python:3.9
   script:
     - pip install boto3  #AWS SDK
-    - python scripts/fetch_recent_files.py
+    - python src/process.py
   only:
     - triggers  #only run when triggered by AWS Lambda
